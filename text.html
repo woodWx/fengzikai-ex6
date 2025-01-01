@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<title>图片放大效果</title>
+<style>
+/* 初始化图片样式 */
+.img-zoom {
+  width: 200px; /* 初始宽度 */
+  height: auto; /* 高度自适应 */
+  transition: transform 0.5s ease; /* 平滑过渡效果 */
+}
+
+/* 鼠标悬停时的图片样式 */
+.img-zoom:hover {
+  transform: scale(1.2); /* 放大1.2倍 */
+}
+</style>
+<script src="jquery-3.7.1.min.js"></script>
+<script>
+$(document).ready(function(){
+  // 鼠标进入图片区域时触发
+  $('.img-zoom').mouseenter(function(){
+    $(this).css('transform', 'scale(1.2)');
+  });
+
+  // 鼠标离开图片区域时触发
+  $('.img-zoom').mouseleave(function(){
+    $(this).css('transform', 'scale(1)');
+  });
+});
+</script>
+</head>
+<body>
+
+<div class="image-container">
+  <img src="fzk.jpg" alt="示例图片" class="img-zoom">
+</div>
+
+</body>
+</html>

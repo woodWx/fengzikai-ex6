@@ -1,0 +1,241 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Visiting guide</title>
+<!doctype html>
+
+ <style>  
+ nav {  
+position: absolute; 
+top: 15px;         
+right: 20px;      
+background-color: rgba(255, 255, 255, 0.8); 
+padding: 10px;  
+border-radius: 5px; 
+box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); 
+}
+nav a {  
+margin: 0 75px;  
+color:#5a3e1b ;  
+text-decoration: none;  
+font-weight: bold;  
+transition: color 0.3s; 
+border-radius: 10px;
+}  
+
+nav a:hover {  
+color: #ffdd57;  
+}  	 
+ body {  
+ font-family: 'Georgia', serif;  
+ margin:0;  
+ padding:0;  
+ background-color: #f7f2e7;  
+ color: #333;  
+ }  
+ header {  
+background: linear-gradient(90deg, #FFFFFF,  #d6c9a8);  
+color: black;  
+padding: 1px 0;  
+box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);  
+ }  
+ main {  
+ padding:30px;  
+ max-width:800px;  
+ margin: auto;  
+ background: #ffffff;  
+ border-radius:10px;  
+ box-shadow:0015px rgba(0,0,0,0.1);  
+ line-height:1.6;  
+ }  
+ h1 {  
+ font-size:36px;  
+ margin-bottom:10px; 
+color: #5a3e1b;  
+ }  
+ h2 {  
+ font-size:38px;  
+ color: #5a3e1b;  
+ margin-top:20px;  
+ text-align: center;
+ }  
+ footer {  
+ text-align: center;  
+ padding:20px0;  
+ background-color: #d6c9a8;  
+ color: #5a3e1b;  
+ position: relative;  
+ bottom:0;  
+ width:100%;  
+ box-shadow:0 -2px5px rgba(0,0,0,0.2);  
+ }  
+ p {  
+ text-indent:2em; 
+ }  
+#scroll-top-btn {
+            height: 50px;   
+	        background-color: #d6c9a8;
+	        border-radius: 50%;
+            position: fixed;
+            bottom: 150px;
+            right: 150px;
+            display: none;
+	        cursor: pointer;
+            overflow: hidden;
+            transition: transform 0.3s ease; 
+        }
+ .divider {  
+ width:100%;  
+ height:2px;  
+ background-color: #5a3e1b;  
+ margin:15px0;  
+ }    
+ .image-container {  
+ text-align: center;  
+ margin:20px0;  
+ }  
+ 
+ .hidden {  
+ display: none;  
+ }
+/* 定义图片的基本样式 */
+/* 定义图片的放大效果 */
+.img-container img {
+  transition: transform 0.3s ease; /* 平滑过渡效果 */
+}
+
+/* 鼠标悬停时的放大效果 */
+.img-container img:hover {
+  transform: scale(1.05); 
+}
+.carousel-container {
+    position: relative;
+    width: 800px; 
+    height: 100%; 
+    margin: 0 auto;
+    overflow: hidden;
+  }
+  .carousel-slide {
+    display: flex;
+    width: 100%;
+    transition: transform 0.1s ease-in-out;
+  }
+  .carousel-slide img {
+    width: 100%;
+    border-radius: 10px;
+    display: block;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+#image-container1 {
+    width: 100%;
+    overflow: hidden; /* 确保容器不会因为图片而溢出 */
+    white-space: nowrap; /* 保持图片在同一行 */
+  }
+  .image-item {
+    display: inline-block; /* 使图片水平排列 */
+    margin-right: 10px; /* 图片之间的间隔 */
+    opacity: 0; /* 初始时图片不显示 */
+    transition: opacity 1s; /* 设置淡入效果的过渡时间 */
+	width: 260px; /* 设置图片宽度 */
+    height: 390px; /* 设置图片高度 */
+  }
+ </style>  
+	
+<script src="jquery-3.7.1.min.js"></script>
+<script>
+$(document).ready(function() {
+  var delay = 1000; // 设置图片出现的间隔时间（毫秒）
+
+  $('#image-container1 img').each(function(index) {
+    console.log('Processing image ' + (index + 1)); // 输出日志以调试
+    setTimeout(function() {
+      $(this).animate({ opacity: 1 }, 1000);
+    }.bind(this), index * delay);
+  });
+});
+
+</script>
+</head>  
+<body>  
+
+<header>  
+<div class="img-container">
+  <a href="index1.html" target="_blank">
+  <img src="logo.png" alt="主页图标" style="border-radius: 10px;" >
+</a>
+</div>
+    <nav>  
+       <a href="introduction.html">景区介绍</a> 
+		<a href="story.html">作者生平</a> 
+        <a href="visiting guide.html">参观指南</a>  
+        <a href="Collections.html">展陈研究</a>  
+        <a href="context.html">联系我们</a>  
+    </nav>  
+</header>  
+
+<main>  
+
+<h2>展陈作品&nbsp;</h2>  
+<div id="image-container1">
+  <img class="image-item" src="作品1.jpg" alt="Image 1">
+  <img class="image-item" src="作品2.png" alt="Image 2">
+  <img class="image-item" src="作品3.jpg" alt="Image 3">
+</div>
+<p><strong>画作1</strong>：《家人扶得醉人归》描绘了柳叶新绿、燕子归来，一派生机盎然的春天景象。 画中两组相互搀扶的人物亦流露着活泼欢快的气氛。 此画用笔凝练，寥寥数笔便准确勾画出屋舍、人物、草地与柳树的形态。 尤其是人物的面部表情，短促的用笔便把舒心的笑容表现得淋漓尽致 。 作品在设色上也清雅沉稳，独具一格，是以浓重的灰色调直接平涂，并且一遍完成，从不繁复渲染。 这种创作方式不仅有国画之趣，而且还借鉴了漫画的表达方式。</p>	
+<p><strong>画作2</strong>：《踏青挑菜》是丰子恺先生的一幅著名画作，画面描绘了春天的农村，人们欢欣鼓舞踏青采菜的欢乐场景。这幅画以其活泼的农村生活气息和生动的描绘技巧著称。在鉴赏这幅画作时，可以从以下几个方面入手：
+
+画面构图：观察画面的整体布局，分析其如何将自然风光与人物活动融为一体。
+人物描绘：分析画中人物的神态、动作，感受他们的喜悦心情。
+色彩运用：注意画作中的色彩搭配，理解丰子恺是如何利用色彩来表现春天的生机与和谐。
+文化内涵：探讨这幅画作所蕴含的文化价值和时代背景。</p>
+	
+<p><strong>画作3</strong>：《爱的收支相抵》
+是丰子恺寓意深刻的漫画，描绘女孩从母亲那里获得爱并传递给娃娃，象征爱的收支过程。此画体现了丰子恺艺术中的温情与哲理，启示人们关于爱与给予的思考。
+
+
+作品背景：《爱的收支相抵》是丰子恺的经典漫画之一，其艺术风格简洁空灵、清新隽永，充分展现了丰子恺艺术中“小中能见大，弦外有余音”的审美韵致<sup>4</sup>。
+寓意解析：这幅画通过一个坐在母亲怀中的女孩，象征性地表达了爱的收支过程。女孩从母亲那里得到爱，再将这份爱传递给她的娃娃，寓意着人的一生中不断地得到爱和给予爱，得到多少爱就能给予多少爱
+
+艺术特色：丰子恺的漫画继承了古代文人画简笔水墨的诗性传统，画面简洁而富有深意<sup>4</sup>。
+表现手法：通过细腻的人物描绘和温馨的场景设置，丰子恺巧妙地传达了爱与传递的主题。画面中，母亲与女孩之间的亲密互动，以及女孩与娃娃之间的温柔传递，都体现了爱的流动与延续。</p>
+
+
+</main>  
+
+<footer>  
+ 
+	
+ <p>
+	©2024 丰子恺纪念馆版权所有</p> 
+</footer>  
+
+<button id="scroll-top-btn" onclick="scrollToTop()">回到顶部&nbsp;</button>	
+	
+<script>  
+ function toggleHours() {  
+ const hoursDiv = document.getElementById('hours');  
+ hoursDiv.classList.toggle('hidden');  
+ }  
+function scrollToTop() {
+        window.scrollTo({top: 0, behavior: 'smooth'});
+    }
+
+    // 当用户滚动一定距离后显示回到顶部按钮
+    window.onscroll = function() {
+        var scrollBtn = document.getElementById("scroll-top-btn");
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            scrollBtn.style.display = "block";
+        } 
+		else {
+            scrollBtn.style.display = "none";
+        }
+    };
+	
+
+
+</script>  
+
+</body>  
+</html>  
